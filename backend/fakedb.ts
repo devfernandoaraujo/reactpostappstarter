@@ -5,8 +5,9 @@ export interface IDecodedUser {
 }
 
 const users = [
-  { id: 1, email: "john123@gmail.com", password: "123" },
-  { id: 2, email: "sandra123@gmail.com", password: "123" },
+  { id: 1, email: "john123@gmail.com", password: "123", avatar: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=170&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY5ODcyNjY1NQ&ixlib=rb-4.0.3&q=80&w=170" },
+  { id: 2, email: "sandra123@gmail.com", password: "123", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=170&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY5ODcyNjc2MQ&ixlib=rb-4.0.3&q=80&w=170" },
+  { id: 3, email: "fernando@gmail.com", password: "123", avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=170&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY5ODcyNjgxOQ&ixlib=rb-4.0.3&q=80&w=170" },
 ];
 
 export const posts = [

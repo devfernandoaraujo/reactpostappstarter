@@ -1,3 +1,4 @@
+import {Suspense, lazy} from "react";
 import Layout from "./components/misc/Layout";
 import LoginPage from "./pages/Auth/Login.page";
 import Landing from "./pages/Landing/Landing.page";
@@ -13,6 +14,9 @@ import {
 import { PostPage, postsLoader } from "./pages/Post/Post.page";
 import { postDetailsLoader } from "./pages/Post/PostDetails.page";
 import PostDetailsPage from "./pages/Post/PostDetails.page";
+import { postEditLoader } from "./pages/Post/EditPost.page";
+import EditPostPage from "./pages/Post/EditPost.page";
+
 
 export const Router = () => {
   const authCheck = useBoundStore((state) => {
@@ -62,6 +66,15 @@ export const Router = () => {
               <CreatePostPage />
             </ProtectedRoute>
           }
+        />
+         <Route
+          path="/posts/edit/:id"
+          element={
+            <ProtectedRoute isAllowed={!!authCheck}>
+              <EditPostPage />
+            </ProtectedRoute>
+          }
+          loader={postEditLoader}
         />
         <Route path="/" element={<Landing />} />
         <Route path="*" element={<NotFound />} />
